@@ -14,7 +14,7 @@
 
      <div class="lato">
        <ul>
-       <li><a class="active" href="http://localhost:8080/">Home</a></li>
+       <li><a class="active" href="/">Home</a></li>
 
 
        <li><a href="https://github.com/MarcoBerlot/dev_skeleton">Documentation</a></li>
@@ -23,7 +23,7 @@
 
       <div class="lato row">
         <div class="col-sm-offset-1 col-sm-2 down-buffer">
-        <h2> My Receipts</h2>
+        <h2> Your Receipts</h2>
       </div>
         <div class=" col-sm-offset-3 col-sm-2 top-buffer">
       <button  id="add-receipt" type="button" class="semi-transparent-button large lato ">Add Receipt</button>
@@ -458,7 +458,7 @@ function takeSnapshot() {
     merchantField.prop('disabled', true);
     amountField.prop('disabled', true);
     $.ajax({
-        url: "http://localhost:8080/images",
+        url: api+"/images",
         dataType: 'json',
         type: 'POST',
         contentType: 'text/plain',
